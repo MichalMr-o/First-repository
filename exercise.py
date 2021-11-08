@@ -1,21 +1,9 @@
-def divide_fizzbuzz(7, 19):
-    three = "Fizz"
-    five = "Buzz"
-    for num in range(1, 101):
-        string_x = ""
-        if num % 3 == 0:
-            string_x += three
-            print(string_x)
-        if num % 5 == 0:
-            string_x += five
-            print(string_x)
-        if string_x == "":
-            print(num)
+def flex_fizz_buzz(num1: int = 3, num2: int = 5, range_from: int = 1, range_to: int = 101):
+    for i in range(range_from, range_to):
+        fizz = 'Fizz' if i % num1 == 0 else ''
+        buzz = 'Buzz' if i % num2 == 0 else ''
+        print(f'{fizz}{buzz}' or i)
+
 
 if __name__ == '__main__':
-    # divide_fizzbuzz()
-
-    for i in range(1, 101):
-        fizz = 'Fizz' if i % 3 == 0 else ''
-        buzz = 'Buzz' if i % 5 == 0 else ''
-        print(f'{fizz}{buzz}' or i)
+    flex_fizz_buzz(5, 7, 101, 201)
